@@ -1,7 +1,28 @@
 /* SPACERS */
 .barSpacerTop {
      width: 100%;
-     height: 5vh;
+     height: 7vh;
+     background-color: #fafafa;
+     overflow: hidden;
+}
+
+.barSpacerBottom {
+     width: 100%;
+     height: 7vh;
+     background-color: #fafafa;
+     overflow: hidden;
+}
+
+.barSpacerLeft {
+     width: 100%;
+     height: 7vh;
+     background-color: #fafafa;
+     overflow: hidden;
+}
+
+.barSpacerRight {
+     width: 100%;
+     height: 7vh;
      background-color: #fafafa;
      overflow: hidden;
 }
@@ -61,7 +82,7 @@
      display: flex;
      align-items: center;
      justify-content: center;
-     min-height: 80vh;
+     min-height: 100vh;
 }
 
 .logoLoading svg {
