@@ -1,0 +1,93 @@
+/* The entire nav itself */
+nav {
+    width: 100%;
+    height: 60px;
+    background-color: #313131;
+    overflow: hidden;
+}
+
+/* Specific tabs */
+nav a {
+    display: block;
+    float: left;
+
+    /* Font Settings */
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: white;
+
+    /* Box - Setup for Testing */
+    /* background-color: #17b0cf; */
+    /* border: 1px solid #000; */
+
+    /* Box - Padding */
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+    /* Remove Link Decoration */
+    text-decoration: none;
+}
+
+nav a spacer {
+    width: 30%
+}
+
+/* CSS Pseudo-Class to change the background color on hover */
+nav a:hover {
+    /* Remove Link Decoration */
+    text-decoration: none;
+    background-color: #5e5e5e;
+
+    /* Font Settings */
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+/* The main logo */
+.container {
+	background-color: #232323;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	
+	svg {
+		max-width: 20rem;
+		width: 100%;
+		height: auto;
+		fill: white;
+		stroke: white;
+		stroke-width: 12;
+		
+		tspan > tspan {
+			// Front Draw
+			stroke-dasharray: 1500;
+			// Back Draw
+			stroke-dashoffset: -1500;
+			
+			@for $i from 1 through 15 {
+				&:nth-of-type(#{$i}) {
+					animation: draw 1000ms #{$i * 250}ms forwards;
+				}
+			}
+		}
+	}
+}
+
+.logoTextFill {
+     stroke: #fff;
+     fill: #645F5A;
+     font-weight: normal;
+     font-family: 'Dancing Script';
+     font-size: 144px;
+}
+
+@keyframes draw {
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
