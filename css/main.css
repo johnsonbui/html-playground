@@ -14,10 +14,8 @@
 }
 
 .barSpacerLeft {
-     width: 100%;
-     height: 7vh;
-     background-color: #fafafa;
-     overflow: hidden;
+     flex-shrink: 1;
+     flex-basis: 5rem;
 }
 
 .barSpacerRight {
@@ -35,6 +33,7 @@
      overflow: hidden;
 }
 
+/* UNUSED */
 /* Specific tabs */
 .barNav a {
      display: block;
@@ -75,6 +74,7 @@
      color: white;
      height: 7vh;
 }
+/* END - UNUSED */
 
 /* LOGO - LOADING */
 .logoLoading {
@@ -177,9 +177,12 @@
      fill: #161616;
      fill-rule: evenodd;
      fill-opacity: 0;
-     -webkit-user-select: none; /* Safari */        
-     -moz-user-select: none; /* Firefox */
-     -ms-user-select: none; /* IE10+/Edge */
+     -webkit-user-select: none;
+     /* Safari */
+     -moz-user-select: none;
+     /* Firefox */
+     -ms-user-select: none;
+     /* IE10+/Edge */
      user-select: none;
 }
 
@@ -188,6 +191,15 @@
      font-weight: normal;
      font-family: 'Dancing Script';
      font-size: 144px;
+}
+
+.logoMini {
+     font-weight: normal;
+     font-family: 'Dancing Script';
+     font-size: 144px;
+     color: #161616;
+     text-decoration: none
+     
 }
 
 @-webkit-keyframes draw {
@@ -200,4 +212,19 @@
      100% {
           stroke-dashoffset: 0;
      }
+}
+
+#load {
+     width: 100%;
+     height: 100%;
+     position: fixed;
+     z-index: 9999;
+}
+
+/* END OF LOGO - LOADING  */
+
+/* Bootstrap Edits */
+.navbar-brand {
+     font-size: 2.00rem !important;
+     color: #161616 !important;
 }
